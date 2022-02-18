@@ -1,15 +1,19 @@
 const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
-const notesData = require('./Develop/db/db.json');
-const fs = require('fs');
 
+const fs = require('fs');
+const apiRoutes = require('./routes/apiRoutes/');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 //added middleware
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
+// Use apiRoutes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
 // GET request for notes
 app.get('/api/notes', (req, res) => {

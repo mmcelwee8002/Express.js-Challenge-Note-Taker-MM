@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 const {
     notes
-} = requir('Develop/db/db.json');
+} = require('../../Develop/db/db.json');
 
 const req = require("express/lib/request");
 const {
