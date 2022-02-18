@@ -1,10 +1,11 @@
 const router = require("express").Router();
 
-
+//json to hold the notes
 const {
     notes
 } = require('../../Develop/db/db.json');
 
+//this doesn't seem to be working to create a new note/delete a note
 const req = require("express/lib/request");
 const {
     createNewNote,
