@@ -2,6 +2,9 @@ const express = require('express');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
+// Helper method for generating unique ids
+
+
 // this 'path is the same used in HTML routes index
 const path = require('path');
 const fs = require('fs');
@@ -17,35 +20,10 @@ app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
-// GET request for notes / this works
-app.get('/api/notes', (req, res) => {
-    // Inform the client
-    res.json(`${req.method} request received to get notes`);
-
-    // Log our request to the terminal
-    console.info(`${req.method} request received to get notes`);
-});
-
-
-// POST request for note
-app.post('/api/notes', (req, res) => {
-    // Inform the client that their POST request was received
-    res.json(`${req.method} request received to add a notes`);
-
-    // Log our request to the terminal
-    console.info(`${req.method} request received to add a notes`);
-});
-
-
-
-
-
-
-
 
 
 app.listen(PORT, () =>
-    console.log(`Example app listening at http://localhost:${PORT}`)
+    console.log(`Note Taker listening at http://localhost:${PORT}/index`)
 );
 
 
