@@ -12,7 +12,7 @@ It is a display and functioning note taking application using Node JS and server
 * NPM server
 
 ## Heroku
-https://note-taker-matthew.herokuapp.com/notes
+https://note-taker-matthew.herokuapp.com
 
 
 ### Contribution
